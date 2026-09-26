@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { fetchLatestVehicleKm, fetchPersonnelAbsences, fetchPersonnel, fetchSpreadsheetVehicles, fetchSpreadsheetTeams } from '../services/sheetsService';
-import PersonnelAbsences from '../components/PersonnelAbsences';
+import LeavesPanel from '../components/LeavesPanel';
 import { PersonnelAbsence as Leave } from '../types';
 
 interface Member {
@@ -336,7 +336,7 @@ const OperationalView: React.FC<{ isLoggedIn: boolean }> = ({ isLoggedIn }) => {
         ))}
       </div>
 
-      <PersonnelAbsences isLoggedIn={isLoggedIn} />
+      <LeavesPanel isLoggedIn={isLoggedIn} />
 
       <div className="bg-white rounded-[32px] border border-slate-100 shadow-sm overflow-hidden">
         <div className="px-8 py-6 border-b border-slate-50 flex items-center justify-between">
